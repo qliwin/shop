@@ -1,0 +1,87 @@
+2016/11/16 21:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/login".' in C:\app\phpStudy\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#1 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\app\phpStudy\www\yii\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/shop/index.php?r=user/login
+---
+2016/11/16 21:50:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/login".' in C:\app\phpStudy\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#1 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\app\phpStudy\www\yii\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/shop/index.php?r=user/login
+---
+2016/11/16 21:50:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/login".' in C:\app\phpStudy\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#1 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\app\phpStudy\www\yii\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/shop/index.php?r=user/login
+---
+2016/11/16 21:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/login".' in C:\app\phpStudy\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#1 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\app\phpStudy\www\yii\shop\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/shop/index.php?r=user/login
+---
+2016/11/16 22:02:00 [error] [php] Use of undefined constant IMG_URL - assumed 'IMG_URL' (C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php:10)
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#1 C:\app\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#2 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#3 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\app\phpStudy\www\yii\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php (10)
+in C:\app\phpStudy\www\yii\shop\index.php (13)
+2016/11/16 22:02:23 [error] [php] Use of undefined constant IMG_URL - assumed 'IMG_URL' (C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php:10)
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#1 C:\app\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#2 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#3 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\app\phpStudy\www\yii\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php (10)
+in C:\app\phpStudy\www\yii\shop\index.php (13)
+2016/11/16 22:04:02 [error] [php] Use of undefined constant IMG_URL - assumed 'IMG_URL' (C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php:10)
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#1 C:\app\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#2 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#3 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\app\phpStudy\www\yii\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php (10)
+in C:\app\phpStudy\www\yii\shop\index.php (13)
+2016/11/16 22:04:43 [error] [php] Use of undefined constant IMG_URL - assumed 'IMG_URL' (C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php:10)
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#1 C:\app\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#2 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#3 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\app\phpStudy\www\yii\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php (10)
+in C:\app\phpStudy\www\yii\shop\index.php (13)
+2016/11/16 22:04:44 [error] [php] Use of undefined constant IMG_URL - assumed 'IMG_URL' (C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php:10)
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#1 C:\app\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#2 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#3 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\app\phpStudy\www\yii\shop\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php (10)
+in C:\app\phpStudy\www\yii\shop\index.php (13)
