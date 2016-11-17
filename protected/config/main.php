@@ -9,6 +9,9 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
 
+    //设置系统默认控制器,这个属性哪里来的还不知道 - -
+    'defaultController'=>'index',
+
 	// preloading 'log' component
 	'preload'=>array('log'),
 

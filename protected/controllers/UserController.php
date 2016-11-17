@@ -5,11 +5,14 @@
  */
 class UserController extends Controller
 {
+    //登录
     public function actionLogin()
     {
-        echo IMG_URL;DIE;
-        echo Yii::app()->baseUrl;die;
-        echo Yii::app()->homeUrl;die;
-        $this->renderPartial('login');
+        $this->render('login');
+    }
+
+    public function actionRegister()
+    {
+        $this->render('register');
     }
 }

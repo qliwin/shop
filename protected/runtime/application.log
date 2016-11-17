@@ -85,3 +85,45 @@ Stack trace:
 REQUEST_URI=/yii/shop/index.php?r=user/login
 in C:\app\phpStudy\www\yii\shop\protected\controllers\UserController.php (10)
 in C:\app\phpStudy\www\yii\shop\index.php (13)
+2016/11/17 09:12:26 [error] [php] Use of undefined constant php - assumed 'php' (D:\phpStudy\www\yii\shop\protected\views\user\login.php:11)
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 D:\phpStudy\www\yii\shop\protected\controllers\UserController.php(13): UserController->renderPartial()
+#2 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#3 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#5 D:\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#6 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#7 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\phpStudy\www\yii\shop\index.php(16): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in D:\phpStudy\www\yii\shop\protected\views\user\login.php (11)
+in D:\phpStudy\www\yii\shop\protected\controllers\UserController.php (13)
+in D:\phpStudy\www\yii\shop\index.php (16)
+2016/11/17 09:12:57 [error] [php] Use of undefined constant php - assumed 'php' (D:\phpStudy\www\yii\shop\protected\views\user\login.php:11)
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 D:\phpStudy\www\yii\shop\protected\controllers\UserController.php(13): UserController->renderPartial()
+#2 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#3 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#5 D:\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#6 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#7 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\phpStudy\www\yii\shop\index.php(16): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in D:\phpStudy\www\yii\shop\protected\views\user\login.php (11)
+in D:\phpStudy\www\yii\shop\protected\controllers\UserController.php (13)
+in D:\phpStudy\www\yii\shop\index.php (16)
+2016/11/17 09:56:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "categroy".' in D:\phpStudy\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CController.php(270): CController->missingAction('categroy')
+#1 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('categroy')
+#2 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('goods/categroy')
+#3 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\phpStudy\www\yii\shop\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/shop/index.php?r=goods/categroy
+---
