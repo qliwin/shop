@@ -127,3 +127,39 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/yii/shop/index.php?r=goods/categroy
 ---
+2016/11/17 21:04:21 [error] [php] Use of undefined constant HOUTAI_CSS_URL - assumed 'HOUTAI_CSS_URL' (C:\app\phpStudy\www\yii\shop\protected\modules\houtai\views\manager\login.php:9)
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(869): ManagerController->renderFile()
+#1 C:\app\phpStudy\www\yii\shop\protected\modules\houtai\controllers\ManagerController.php(10): ManagerController->renderPartial()
+#2 C:\app\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): ManagerController->actionLogin()
+#3 C:\app\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\app\phpStudy\www\yii\framework\web\CController.php(286): ManagerController->runAction()
+#5 C:\app\phpStudy\www\yii\framework\web\CController.php(265): ManagerController->runActionWithFilters()
+#6 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): ManagerController->run()
+#7 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\app\phpStudy\www\yii\shop\index.php(16): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=houtai/manager/login
+in C:\app\phpStudy\www\yii\shop\protected\modules\houtai\views\manager\login.php (9)
+in C:\app\phpStudy\www\yii\shop\protected\modules\houtai\controllers\ManagerController.php (10)
+in C:\app\phpStudy\www\yii\shop\index.php (16)
+2016/11/17 21:52:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\app\phpStudy\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(270): CController->missingAction('index')
+#1 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#2 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('houtai/manager/...')
+#3 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\app\phpStudy\www\yii\shop\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/shop/index.php?r=houtai/manager/index
+---
+2016/11/17 21:52:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\app\phpStudy\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(270): CController->missingAction('index')
+#1 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#2 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('houtai/index/in...')
+#3 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\app\phpStudy\www\yii\shop\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/shop/index.php?r=houtai/index/index
+---
