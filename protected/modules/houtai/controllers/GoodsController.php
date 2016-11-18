@@ -92,23 +92,24 @@ class GoodsController extends Controller
     //这里的id要和get过来的url上的参数名一致index.php?r=houtai/goods/update&id=2
     public function actionUpdate($id)
     {
-        $goods_model = Goods::model();
-        $goods_list = $goods_model->findByPk($id);
+        //这个地方需要注意，直接$goods_model = Goods::model()；$goods_model->save()无效
+        $goods_model = Goods::model()->findByPk($id);
+
         if (isset($_POST['Goods'])) {
             foreach ($_POST['Goods'] as $key => $good) {
                 $goods_model->$key = $good;
             }
-            //p($_POST['Goods']);
+
             if ($goods_model->save()) {
-                p($goods_model);
+                //p($goods_model);
                 //重定向
-                //$this->redirect('./index.php?r=houtai/goods/show');
+                $this->redirect('./index.php?r=houtai/goods/show');
             } else {
                 echo 'fail';die;
             }
         }
 
-        $this->renderPartial('update' ,array('goods_model' => $goods_list));
+        $this->renderPartial('update' ,array('goods_model' => $goods_model));
     }
 
 
