@@ -12,6 +12,8 @@ defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 //自定义常量
 require_once(dirname(__FILE__) . '/protected/config/constans.php');
 
+//自定义函数
+require_once(dirname(__FILE__) . '/protected/function.php');
+
 require_once($yii);
 Yii::createWebApplication($config)->run();
-

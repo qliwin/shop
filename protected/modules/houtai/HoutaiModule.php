@@ -2,8 +2,13 @@
 
 class HoutaiModule extends CWebModule
 {
+
+
 	public function init()
 	{
+        //定义后台默认控制器
+        $this->defaultController='index';
+
 		// this method is called when the module is being created
 		// you may place code here to customize the module or the application
 
