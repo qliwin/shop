@@ -665,3 +665,50 @@ REQUEST_URI=/yii/shop/index.php?r=houtai/goods/update&id=1
 in D:\phpStudy\www\yii\shop\protected\modules\houtai\views\goods\update.php (27)
 in D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php (97)
 in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/19 10:36:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.sw_goods' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `sw_goods`.
+in C:\app\phpStudy\www\yii\shop\protected\models\Goods.php (13)
+in C:\app\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php (15)
+in C:\app\phpStudy\www\yii\shop\index.php (19)
+2016/11/19 10:36:58 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{goods}}" for active record class "Goods" cannot be found in the database.' in C:\app\phpStudy\www\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Goods))
+#1 C:\app\phpStudy\www\yii\shop\protected\models\Goods.php(13): CActiveRecord::model('Goods')
+#2 C:\app\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php(15): Goods::model()
+#3 C:\app\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): GoodsController->actionShow()
+#4 C:\app\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\app\phpStudy\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\app\phpStudy\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#8 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('houtai/goods/sh...')
+#9 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\app\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/shop/index.php?r=houtai/goods/show
+---
+2016/11/19 11:55:36 [error] [php] Undefined variable: goods_list (C:\app\phpStudy\www\yii\shop\protected\modules\houtai\views\goods\show.php:48)
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(869): GoodsController->renderFile()
+#1 C:\app\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php(138): GoodsController->renderPartial()
+#2 C:\app\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): GoodsController->actionTestAR()
+#3 C:\app\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\app\phpStudy\www\yii\framework\web\CController.php(286): GoodsController->runAction()
+#5 C:\app\phpStudy\www\yii\framework\web\CController.php(265): GoodsController->runActionWithFilters()
+#6 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): GoodsController->run()
+#7 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\app\phpStudy\www\yii\shop\index.php(19): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=houtai/goods/testar
+in C:\app\phpStudy\www\yii\shop\protected\modules\houtai\views\goods\show.php (48)
+in C:\app\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php (138)
+in C:\app\phpStudy\www\yii\shop\index.php (19)
+2016/11/19 11:55:58 [error] [php] Use of undefined constant goods_list - assumed 'goods_list' (C:\app\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php:138)
+Stack trace:
+#0 C:\app\phpStudy\www\yii\framework\web\CController.php(286): GoodsController->runAction()
+#1 C:\app\phpStudy\www\yii\framework\web\CController.php(265): GoodsController->runActionWithFilters()
+#2 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(282): GoodsController->run()
+#3 C:\app\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\app\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\app\phpStudy\www\yii\shop\index.php(19): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=houtai/goods/testar
+in C:\app\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php (138)
+in C:\app\phpStudy\www\yii\shop\index.php (19)

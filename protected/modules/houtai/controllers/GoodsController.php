@@ -112,5 +112,33 @@ class GoodsController extends Controller
         $this->renderPartial('update' ,array('goods_model' => $goods_model));
     }
 
+    /**
+     * 删除数据
+     * 通过get方式传递被删除商品的id
+     * @param $id
+     */
+    public function actionDel($id)
+    {
+        //1 获得数据模型对象
+        $goods_model = Goods::model();
+        //2 获得被删除商品的模型对象
+        $goods_info = $goods_model->findByPk($id);
 
+        //3 是goods_model调用delete()还是goods_info,答案是goods_info
+        //  也可以写在一起 $goods_model = Goods::model()->findByPk($id);
+        if ($goods_info->delete()) {
+            $this->redirect('./index.php?r=houtai/goods/show');
+        }
+    }
+
+    public function actionTestAR()
+    {
+        $model = Goods::model();
+        //findall($condition, $param)
+        //$goods_list = $model->findAllByPk(array(1,2,5));
+        //$goods_list = $model->findAll("goods_name like '诺%' and goods_price > 500");
+        $goods_list = $model->findAll("goods_name like :goods_name and goods_price > :goods_price", array(':goods_name'=>'诺%', ':goods_price'=>800));
+
+        $this->renderPartial('show', array('goods_list'=>$goods_list));
+    }
 }

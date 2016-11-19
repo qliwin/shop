@@ -56,7 +56,8 @@
                         <td><?php echo $goods->goods_brand_id; ?></td>
                         <td><?php echo $goods->goods_create_time; ?></td>
                         <td><a href="./index.php?r=houtai/goods/update&id=<?php echo $goods->goods_id; ?>">修改</a></td>
-                        <td><a href="javascript:;" onclick="delete_product(1)">删除</a></td>
+                        <td><a href="./index.php?r=houtai/goods/del&id=<?php echo $goods->goods_id; ?>">删除</a></td>
+<!--                        <td><a href="javascript:;" onclick="delete_product(1)">删除</a></td>-->
                     </tr>
                     <?php $index++; ?>
                     <?php endforeach; ?>
