@@ -21,17 +21,18 @@ class UserController extends Controller
         //表单提交
         if (isset($_POST['User'])) {
             //爱好需要处理
-            $_POST['User']['user_hobby'] = implode(',', $_POST['User']['user_hobby']);
+            $_POST['User']['user_hobby'] = is_array($_POST['User']['user_hobby'] ) ? implode(',', $_POST['User']['user_hobby']) : '';
             //$_POST['User']['password2'] = $_POST['User']['password2'];
 
-            foreach ($_POST['User'] as $k => $v) {
-                $user_model->$k = $v;
-            }
+            //foreach ($_POST['User'] as $k => $v) {
+            //    $user_model->$k = $v;
+            //}
 
-            //$user_model->attributes = $_POST['User'];
+$user_model->setScenario('register');
+            $user_model->attributes = $_POST['User'];
 
             if ($user_model->save()) {
-                echo 'success';
+                //echo 'success';
             } else {
                 echo 'fail';
             }

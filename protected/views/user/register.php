@@ -32,6 +32,7 @@
 
                                         <td style="width:87%;">
                                             <?php echo $form->textField($user_model, 'username',array('class'=>'inputBg', 'id'=>'User_username')); ?>
+                                            <?php echo $form->error($user_model, 'username'); ?>
                                             <!--<input class="inputBg" size="25" name="User[username]" id="User_username" type="text" value="" />                  -->
                                             <!--<span style="color:red;">用户名已经存在</span>-->
                                         </td>

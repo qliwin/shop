@@ -31,4 +31,11 @@ class User extends CActiveRecord
         );
     }
 
+    public function rules()
+    {
+        return array(
+            array('username', 'required', 'message'=>'用户名不得为空'),
+        );
+    }
+
 }
