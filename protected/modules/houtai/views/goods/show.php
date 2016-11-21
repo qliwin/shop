@@ -64,7 +64,7 @@
 
                     <tr>
                         <td colspan="20" style="text-align: center;">
-                            [1]
+                            <?php echo isset($fpage) ? $fpage : ''; ?>
                         </td>
                     </tr>
                 </tbody>

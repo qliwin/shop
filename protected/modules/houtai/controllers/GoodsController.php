@@ -1,11 +1,9 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: qli
- * Date: 2016/11/18
- * Time: 10:28
- */
+//创建数据模型model对象
+//new  Goods()  ;   调用save方法的时候给我们执行insert语句
+//Goods::model();    调用save方法的时候执行update语句
+
 class GoodsController extends Controller
 {
     //商品展示
@@ -56,6 +54,12 @@ class GoodsController extends Controller
             foreach ($_POST['Goods'] as $key => $good) {
                 $goods_model->$key = $good;
             }
+
+            // 2 再次优化
+            //必须要在Goods model中创建rules()
+
+            //$goods_model->attributes = $_POST['Goods'];
+            //p($goods_model);die;
 
             // 3 调用save 添加
             if ($goods_model->save()) {
@@ -137,8 +141,40 @@ class GoodsController extends Controller
         //findall($condition, $param)
         //$goods_list = $model->findAllByPk(array(1,2,5));
         //$goods_list = $model->findAll("goods_name like '诺%' and goods_price > 500");
-        $goods_list = $model->findAll("goods_name like :goods_name and goods_price > :goods_price", array(':goods_name'=>'诺%', ':goods_price'=>800));
+        //$goods_list = $model->findAll("goods_name like :goods_name and goods_price > :goods_price", array(':goods_name'=>'诺%', ':goods_price'=>800));
+        //$goods_list = $model->findAll(array(
+        //                                        'select' => 'goods_name, goods_price, goods_id',
+        //                                        'condition' => 'goods_name like :goods_name',
+        //                                        'order' => 'goods_price desc',
+        //                                        'limit' => '5',
+        //                                        'params' => array(':goods_name' => '诺%'),
+        //                                    ));
 
         $this->renderPartial('show', array('goods_list'=>$goods_list));
+    }
+
+    /**
+     * 分页展示商品
+     * Pagination 是第三方类库，已组建component形式存在
+     */
+    public function actionShowPage()
+    {
+        $goods_model = Goods::model();
+
+        //1 获得商品总的条数
+        $cnt = $goods_model->count();
+        $per = 10; //每页显示条数
+
+        //2 实例化分页类，在main配置中已import
+        $page = new Pagination($cnt, $per);
+
+        //3 拼凑sql
+        $sql = "select * from {{goods}} $page->limit";
+        $goods_list = $goods_model->findAllBySql($sql);
+
+        //分页列表
+        $fpage = $page->fpage();
+        //echo $fpage;die;
+        $this->renderPartial('show', array('goods_list'=>$goods_list, 'fpage'=>$fpage));
     }
 }
