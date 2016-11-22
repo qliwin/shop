@@ -13,6 +13,7 @@ class UserController extends Controller
 
     public function actionRegister()
     {
+        //echo Yii::getVersion();//1.1.13
         $user_model = new User();
         $user_sex_list = array(1 => '男', 2 => '女', 3 => '保密',);
         $user_xueli_list = array(1 => '请选择', 2 => '小学', 3 => '中学', 4 => '大学');
@@ -28,9 +29,9 @@ class UserController extends Controller
             //    $user_model->$k = $v;
             //}
 
-$user_model->setScenario('register');
-            $user_model->attributes = $_POST['User'];
 
+            $user_model->attributes = $_POST['User'];
+            //echo $user_model->user_introduce;die;
             if ($user_model->save()) {
                 //echo 'success';
             } else {

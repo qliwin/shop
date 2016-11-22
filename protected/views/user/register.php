@@ -19,7 +19,7 @@
                     <div class="usBox_2 clearfix">
                         <div class="logtitle3"></div>
                         <!--<form id="yw0" action="/index.php?r=user/register" method="post">-->
-                            <?php $form = $this->beginWidget('CActiveForm'); ?>
+                            <?php $form = $this->beginWidget('CActiveForm',array('htmlOptions'=>array('enctype'=>'multipart/form-data'))); ?>
                             <table cellpadding="5" cellspacing="3" style="text-align:left; width:100%; border:0;">
                                 <tbody>
                                     <tr>
@@ -45,16 +45,18 @@
 
                                         <td>
                                             <?php echo $form->passwordField($user_model, 'password',array('id'=>'User_password')); ?>
+                                            <?php echo $form->error($user_model, 'password'); ?>
                                             <!--<input class="inputBg" size="25" name="User[password]" id="User_password" type="password" value="" />         -->
                                         </td>
                                     </tr>
                                     <tr>
                                         <td align="right">
-                                            <?php //echo $form->labelEx($user_model, 'password2',array('class'=>'required')); ?>
+                                            <?php echo $form->labelEx($user_model, 'password2',array('class'=>'required')); ?>
                                             <!--<label for="User_password2">密码确认</label>-->
                                         </td>
                                         <td>
-                                            <?php //echo $form->passwordField($user_model, 'password2',array('id'=>'User_password2')); ?>
+                                            <?php echo $form->passwordField($user_model, 'password2',array('id'=>'User_password2')); ?>
+                                            <?php echo $form->error($user_model, 'password2'); ?>
                                             <!--<input class="inputBg" size="25" name="User[password2]" id="User_password2" type="password" />-->
                                         </td>
 
@@ -66,6 +68,7 @@
                                         </td>
                                         <td>
                                             <?php echo $form->textField($user_model, 'user_email', array('id' => 'User_user_email')); ?>
+                                            <?php echo $form->error($user_model, 'user_email'); ?>
                                             <!--<input class="inputBg" size="25" name="User[user_email]" id="User_user_email" type="text" value="" />    -->
                                         </td>
                                     </tr>
@@ -76,6 +79,7 @@
                                         </td>
                                         <td>
                                             <?php echo $form->textField($user_model, 'user_qq', array('id' => 'User_user_qq')); ?>
+                                            <?php echo $form->error($user_model, 'user_qq'); ?>
                                             <!--<input class="inputBg" size="25" name="User[user_qq]" id="User_user_qq" type="text" value="" />-->
                                         </td>
                                     </tr>
@@ -86,6 +90,7 @@
                                         </td>
                                         <td>
                                             <?php echo $form->textField($user_model, 'user_tel', array('id' => 'User_user_tel')); ?>
+                                            <?php echo $form->error($user_model, 'user_tel'); ?>
                                             <!--<input class="inputBg" size="25" name="User[user_tel]" id="User_user_tel" type="text" value="" />-->
                                         </td>
                                     </tr>
@@ -116,6 +121,7 @@
                                         </td>
                                         <td>
                                             <?php echo $form->dropDownList($user_model, 'user_xueli', $user_xueli_list); ?>
+                                            <?php echo $form->error($user_model, 'user_xueli'); ?>
                                             <!--<select name="User[user_xueli]" id="User_user_xueli">-->
                                             <!--    <option value="1" selected="selected">-请选择-</option>-->
                                             <!--    <option value="2">小学</option>-->
@@ -135,7 +141,9 @@
                                         </td>
 
                                         <td>
+                                            <input type="text" name="aa" value="22" id="">
                                             <?php echo $form->checkBoxList($user_model, 'user_hobby', $user_hobby_list, array('separator'=>'&nbsp&nbsp')); ?>
+                                            <?php echo $form->error($user_model, 'user_hobby'); ?>
                                             <!--<input id="ytUser_user_hobby" type="hidden" value="" name="User[user_hobby]" />-->
                                             <!--<span id="User_user_hobby">-->
                                             <!--<input id="User_user_hobby_0" value="1" type="checkbox" name="User[user_hobby][]" /> -->
