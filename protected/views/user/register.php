@@ -19,7 +19,14 @@
                     <div class="usBox_2 clearfix">
                         <div class="logtitle3"></div>
                         <!--<form id="yw0" action="/index.php?r=user/register" method="post">-->
-                            <?php $form = $this->beginWidget('CActiveForm',array('htmlOptions'=>array('enctype'=>'multipart/form-data'))); ?>
+                            <?php $form = $this->beginWidget('CActiveForm',array(
+                                'htmlOptions'=>array('enctype'=>'multipart/form-data'),
+                                'id'=>'register-form',
+                                'enableClientValidation'=>true, //引入jquery
+                                'clientOptions'=>array(
+                                    'validateOnSubmit'=>true,   //在提交时验证
+                                ),
+                            )); ?>
                             <table cellpadding="5" cellspacing="3" style="text-align:left; width:100%; border:0;">
                                 <tbody>
                                     <tr>
@@ -141,7 +148,6 @@
                                         </td>
 
                                         <td>
-                                            <input type="text" name="aa" value="22" id="">
                                             <?php echo $form->checkBoxList($user_model, 'user_hobby', $user_hobby_list, array('separator'=>'&nbsp&nbsp')); ?>
                                             <?php echo $form->error($user_model, 'user_hobby'); ?>
                                             <!--<input id="ytUser_user_hobby" type="hidden" value="" name="User[user_hobby]" />-->

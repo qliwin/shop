@@ -36,12 +36,12 @@ class GoodsController extends Controller
     //商品新增页面
     public function actionAdd()
     {
-        // 1 实例化model
+        // 1. 实例化数据模型对象
         $goods_model = new Goods();
 
-        // 2 判断有无提交表单
+        // 2. 收集表单数据 & 数据处理
         if (isset($_POST['Goods'])) {
-            //将post值赋值给数据对象模型
+        // 3. 将post值赋值给数据对象模型
             //$goods_model->goods_name = $_POST['Goods']['goods_name'];
             //$goods_model->goods_category_id = $_POST['Goods']['goods_category_id'];
             //$goods_model->goods_brand_id = $_POST['Goods']['goods_brand_id'];
@@ -50,18 +50,17 @@ class GoodsController extends Controller
             //$goods_model->goods_number = $_POST['Goods']['goods_number'];
             //$goods_model->goods_introduce = $_POST['Goods']['goods_introduce'];
 
-            // 2 优化$_POST
+            // 优化$_POST
             foreach ($_POST['Goods'] as $key => $good) {
                 $goods_model->$key = $good;
             }
 
-            // 2 再次优化
+            // 再次优化
             //必须要在Goods model中创建rules()
-
             //$goods_model->attributes = $_POST['Goods'];
             //p($goods_model);die;
 
-            // 3 调用save 添加
+        // 4. 调用save 添加
             if ($goods_model->save()) {
                 //重定向
                 $this->redirect('./index.php?r=houtai/goods/show');

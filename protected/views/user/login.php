@@ -14,16 +14,21 @@
             <div class="usBox clearfix">
                 <div class="usBox_1 f_l">
                     <div class="logtitle"></div>
-                    <form name="formLogin" action="#" method="post">
+                    <?php $form = $this->beginWidget('CActiveForm'); ?>
                         <table align="left" border="0" cellpadding="3" cellspacing="5" width="100%">
                             <tbody><tr>
-                                    <td align="right" width="15%">用户名</td>
-                                    <td width="85%"><input name="username" size="25" class="inputBg" type="text" /></td>
+                                    <td align="right" width="25%"><?php echo $form->labelEx($login_model,'username'); ?></td>
+                                    <td width="75%">
+                                        <?php echo $form->textField($login_model, 'username', array('class'=>'inputBg', 'size'=>25)); ?>
+                                        <?php echo $form->error($login_model, 'username'); ?>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td align="right">密码</td>
+                                    <td align="right"><?php echo $form->labelEx($login_model,'password'); ?></td>
                                     <td>
-                                        <input name="password" size="15" class="inputBg" type="password" />
+
+                                        <?php echo $form->passwordField($login_model, 'password', array('class'=>'inputBg', 'size'=>25)); ?>
+                                        <?php echo $form->error($login_model, 'password'); ?>
                                     </td>
                                 </tr>
                                 <tr>
@@ -40,7 +45,7 @@
                                 </tr>
                                 <tr><td></td><td><a href="#" class="f3">密码问题找回密码</a>&nbsp;&nbsp;&nbsp;<a href="#" class="f3">注册邮件找回密码</a></td></tr>
                             </tbody></table>
-                    </form>
+                    <?php $this->endWidget(); ?>
                     <div class="blank"></div>
                 </div>
                 <div class="usTxt">
