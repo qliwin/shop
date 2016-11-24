@@ -2123,3 +2123,86 @@ REQUEST_URI=/yii/shop/index.php?r=index/index
 in D:\phpStudy\www\yii\shop\protected\views\layouts\shop.php (35)
 in D:\phpStudy\www\yii\shop\protected\controllers\IndexController.php (13)
 in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/24 09:59:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha11".' in D:\phpStudy\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CController.php(270): CController->missingAction('captcha11')
+#1 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('captcha11')
+#2 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/captcha11')
+#3 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/shop/index.php?r=user/captcha11
+---
+2016/11/24 10:12:28 [error] [php] Object of class CCaptcha could not be converted to string (D:\phpStudy\www\yii\shop\protected\views\user\login.php:39)
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 D:\phpStudy\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 D:\phpStudy\www\yii\shop\protected\controllers\UserController.php(37): UserController->render()
+#3 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#4 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#6 D:\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\phpStudy\www\yii\shop\index.php(19): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in D:\phpStudy\www\yii\shop\protected\views\user\login.php (39)
+in D:\phpStudy\www\yii\shop\protected\controllers\UserController.php (37)
+in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/24 10:12:52 [error] [php] Object of class CCaptcha could not be converted to string (D:\phpStudy\www\yii\shop\protected\views\user\login.php:39)
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 D:\phpStudy\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 D:\phpStudy\www\yii\shop\protected\controllers\UserController.php(37): UserController->render()
+#3 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#4 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#6 D:\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\phpStudy\www\yii\shop\index.php(19): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in D:\phpStudy\www\yii\shop\protected\views\user\login.php (39)
+in D:\phpStudy\www\yii\shop\protected\controllers\UserController.php (37)
+in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/24 10:12:56 [error] [php] Object of class CCaptcha could not be converted to string (D:\phpStudy\www\yii\shop\protected\views\user\login.php:39)
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 D:\phpStudy\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 D:\phpStudy\www\yii\shop\protected\controllers\UserController.php(37): UserController->render()
+#3 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#4 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\phpStudy\www\yii\framework\web\CController.php(286): UserController->runAction()
+#6 D:\phpStudy\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\phpStudy\www\yii\shop\index.php(19): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=user/login
+in D:\phpStudy\www\yii\shop\protected\views\user\login.php (39)
+in D:\phpStudy\www\yii\shop\protected\controllers\UserController.php (37)
+in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/24 10:33:50 [warning] [application] Failed to set unsafe attribute "captcha_code" of "LoginForm".
+in D:\phpStudy\www\yii\shop\protected\controllers\UserController.php (27)
+in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/24 10:33:51 [warning] [application] Failed to set unsafe attribute "captcha_code" of "LoginForm".
+in D:\phpStudy\www\yii\shop\protected\controllers\UserController.php (27)
+in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/24 10:33:53 [warning] [application] Failed to set unsafe attribute "captcha_code" of "LoginForm".
+in D:\phpStudy\www\yii\shop\protected\controllers\UserController.php (27)
+in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/24 11:12:40 [error] [exception.CException] exception 'CException' with message 'Alias "application.protected.controllers.MyClass" is invalid. Make sure it points to an existing PHP file and the file is readable.' in D:\phpStudy\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\YiiBase.php(196): YiiBase::import('application.pro...', true)
+#1 D:\phpStudy\www\yii\framework\web\CController.php(440): YiiBase::createComponent(Array, Object(UserController), 'myclass')
+#2 D:\phpStudy\www\yii\framework\web\CController.php(417): CController->createActionFromMap(Array, 'myclass', 'myclass')
+#3 D:\phpStudy\www\yii\framework\web\CController.php(259): CController->createAction('myclass')
+#4 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('myclass')
+#5 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/myclass')
+#6 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii/shop/index.php?r=user/myclass
+---

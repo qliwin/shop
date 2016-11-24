@@ -32,7 +32,7 @@
                     <?php else: ?>
                     <font id="ECS_MEMBERZONE">
                         <div id="append_parent"></div>
-                        <font class="f4_b"><?php echo Yii::app()->user->name; ?></font>, 欢迎您回来！
+                        <font class="f4_b"><?php echo Yii::app()->user->name; ?></font>, 欢迎您回来！<?php echo Yii::app()->session['var']; ?>
                         <a href="#">用户中心</a>
                         <a href="./index.php?r=user/logout">退出</a>
                     </font>

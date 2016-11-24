@@ -5,6 +5,25 @@
  */
 class UserController extends Controller
 {
+    //验证码
+    public function actions()
+    {
+        //在当前控制器中，以方法的形式访问其他类
+        //注意：必须设定为 actions（）这个名称
+        //如: 访问 http://地址/index.php?r=user/captcha ,在user控制器中无captcha方法，则会访问如下的captcha类（这个类必须提供一个run（）方法）
+        //system.web.widgets.captcha.CCaptchaAction  system 代表framework文件夹 是路径别名，
+        //application.controllers.MyClass  application 代表protected文件夹
+        return array(
+              'captcha' => array(
+                  'class' => 'system.web.widgets.captcha.CCaptchaAction',
+              ),
+              'myclass' => array(
+                  'class' => 'application.controllers.MyClass',
+              ),
+
+        );
+    }
+
     //用户登录
     public function actionLogin()
     {
@@ -20,7 +39,7 @@ class UserController extends Controller
             //validate()将调用rules()
             //save()方法的执行顺序：save()->validate()->rules()
             if ($login_model->validate() && $login_model->login()) {
-                //echo 'login success';
+                Yii::app()->session['var']='李益达来也！！';
                 $this->redirect('./index.php?r=index/index');
             }
         }
@@ -30,8 +49,8 @@ class UserController extends Controller
     //用户退出登录
     public function actionLogOut()
     {
-        Yii::app()->session->clear();   //移去所有session变量
-        Yii::app()->session->destroy(); //移去存储在服务器端的数据
+        Yii::app()->session->clear();   //移去session变量
+        Yii::app()->session->destroy(); //移去存储在服务器端的数据，session文件还是在的，只是里面的信息被删除了
         $this->redirect('./index.php?r=user/login');
     }
 

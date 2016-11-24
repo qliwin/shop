@@ -32,8 +32,20 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2"><input value="1" name="remember" id="remember" type="checkbox" />
-                                        <label for="remember">请保存我这次的登录信息。</label></td>
+                                    <td align="right"><?php echo $form->label($login_model,'captcha_code'); ?></td>
+                                    <td>
+
+                                        <?php echo $form->textField($login_model, 'captcha_code', array('maxlength'=>4)); ?>
+                                        <?php $this->widget('CCaptcha'); ?>
+                                        <?php echo $form->error($login_model, 'captcha_code'); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <?php echo $form->checkBox($login_model, 'rememberMe' ,array('id'=>'remember')); ?>
+                                        <?php echo $form->label($login_model, 'rememberMe'); ?>
+                                        <!--<input value="1" name="remember" id="remember" type="checkbox" />-->
+                                        <!--<label for="remember">请保存我这次的登录信息。</label></td>-->
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
