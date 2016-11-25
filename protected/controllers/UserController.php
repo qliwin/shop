@@ -49,8 +49,8 @@ class UserController extends Controller
     //用户退出登录
     public function actionLogOut()
     {
-        Yii::app()->session->clear();   //移去session变量
-        Yii::app()->session->destroy(); //移去存储在服务器端的数据，session文件还是在的，只是里面的信息被删除了
+        Yii::app()->session->clear();   //删除储在服务器端session文件里面的内容
+        Yii::app()->session->destroy(); //删除储在服务器端session文件
         $this->redirect('./index.php?r=user/login');
     }
 

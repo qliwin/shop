@@ -17,6 +17,13 @@ class HoutaiModule extends CWebModule
 			'houtai.models.*',
 			'houtai.components.*',
 		));
+
+        //为后台登录管理员设置session名字前缀
+        Yii::app()->setComponents(array(
+            'user' => array(
+                'stateKeyPrefix' => 'houtai',
+            )
+        ));
 	}
 
 	public function beforeControllerAction($controller, $action)

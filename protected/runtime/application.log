@@ -2206,3 +2206,136 @@ Stack trace:
 #8 {main}
 REQUEST_URI=/yii/shop/index.php?r=user/myclass
 ---
+2016/11/24 14:52:50 [error] [exception.CException] exception 'CException' with message 'Property "CDbConnection.enable" is not defined.' in D:\phpStudy\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\YiiBase.php(220): CComponent->__set('enable', false)
+#1 D:\phpStudy\www\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 D:\phpStudy\www\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#3 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#4 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#5 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Goods))
+#6 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Goods')
+#7 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#8 D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php(40): CActiveRecord->__construct()
+#9 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): GoodsController->actionAdd()
+#10 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\phpStudy\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\phpStudy\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('add')
+#14 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('houtai/goods/ad...')
+#15 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/shop/index.php?r=houtai/goods/add
+---
+2016/11/24 14:52:51 [error] [exception.CException] exception 'CException' with message 'Property "CDbConnection.enable" is not defined.' in D:\phpStudy\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\YiiBase.php(220): CComponent->__set('enable', false)
+#1 D:\phpStudy\www\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 D:\phpStudy\www\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#3 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#4 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#5 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Goods))
+#6 D:\phpStudy\www\yii\shop\protected\models\Goods.php(13): CActiveRecord::model('Goods')
+#7 D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php(13): Goods::model()
+#8 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): GoodsController->actionShow()
+#9 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\phpStudy\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\phpStudy\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#13 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('houtai/goods/sh...')
+#14 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/shop/index.php?r=houtai/goods/show
+---
+2016/11/24 14:53:09 [error] [exception.CException] exception 'CException' with message 'Property "CDbConnection.enable" is not defined.' in D:\phpStudy\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\YiiBase.php(220): CComponent->__set('enable', true)
+#1 D:\phpStudy\www\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 D:\phpStudy\www\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#3 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#4 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#5 D:\phpStudy\www\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Goods))
+#6 D:\phpStudy\www\yii\shop\protected\models\Goods.php(13): CActiveRecord::model('Goods')
+#7 D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\GoodsController.php(13): Goods::model()
+#8 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): GoodsController->actionShow()
+#9 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\phpStudy\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\phpStudy\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#13 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('houtai/goods/sh...')
+#14 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/shop/index.php?r=houtai/goods/show
+---
+2016/11/24 15:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/create".' in D:\phpStudy\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('test/create')
+#1 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/shop/index.php?r=test/create
+---
+2016/11/24 15:41:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/create".' in D:\phpStudy\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('test/create')
+#1 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/shop/index.php?r=test/create&id=1&name=%E5%BC%A0%E4%B8%89
+---
+2016/11/24 15:42:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/create".' in D:\phpStudy\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('test/create')
+#1 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/shop/index.php?r=test/create&id=1&name=%E5%BC%A0%E4%B8%89
+---
+2016/11/25 08:36:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "houtai/managet/login".' in D:\phpStudy\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('houtai/managet/...')
+#1 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/shop/index.php?r=houtai/managet/login
+---
+2016/11/25 08:44:18 [error] [php] Undefined variable: login_model (D:\phpStudy\www\yii\shop\protected\modules\houtai\views\manager\login.php:27)
+Stack trace:
+#0 D:\phpStudy\www\yii\framework\web\CController.php(869): ManagerController->renderFile()
+#1 D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\ManagerController.php(10): ManagerController->renderPartial()
+#2 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): ManagerController->actionLogin()
+#3 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\phpStudy\www\yii\framework\web\CController.php(286): ManagerController->runAction()
+#5 D:\phpStudy\www\yii\framework\web\CController.php(265): ManagerController->runActionWithFilters()
+#6 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): ManagerController->run()
+#7 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\phpStudy\www\yii\shop\index.php(19): CWebApplication->run()
+REQUEST_URI=/yii/shop/index.php?r=houtai/manager/login
+in D:\phpStudy\www\yii\shop\protected\modules\houtai\views\manager\login.php (27)
+in D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\ManagerController.php (10)
+in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/25 09:03:14 [warning] [application] Failed to set unsafe attribute "username" of "Manager".
+in D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\ManagerController.php (14)
+in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/25 09:03:14 [warning] [application] Failed to set unsafe attribute "password" of "Manager".
+in D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\ManagerController.php (14)
+in D:\phpStudy\www\yii\shop\index.php (19)
+2016/11/25 10:50:33 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "clear".' in D:\phpStudy\www\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\ManagerController.php(54): CComponent->__call('clear', Array)
+#1 D:\phpStudy\www\yii\shop\protected\modules\houtai\controllers\ManagerController.php(54): CWebApplication->clear()
+#2 D:\phpStudy\www\yii\framework\web\actions\CInlineAction.php(49): ManagerController->actionDelSession()
+#3 D:\phpStudy\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\phpStudy\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\phpStudy\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\phpStudy\www\yii\framework\web\CWebApplication.php(282): CController->run('delsession')
+#7 D:\phpStudy\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('houtai/manager/...')
+#8 D:\phpStudy\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\phpStudy\www\yii\shop\index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/shop/index.php?r=houtai/manager/delsession
+---
