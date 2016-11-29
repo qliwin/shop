@@ -9,7 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
 
-    //设置系统默认控制器,这个属性哪里来的还不知道 - -
+    //设置系统默认控制器,这个属性 framework/web/CWebApplication
     'defaultController'=>'index',
 
 	// preloading 'log' component
@@ -40,6 +40,11 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+
+            //在使用filter过滤时，未登录的用户会自动跳转到自定义的登录页面
+            //属性在 framework/web/auth/CWebUser
+            'loginUrl' => array('/user/login'),
+            //'loginUrl' => './index.php?r=user/login',
 		),
 		// uncomment the following to enable URLs in path-format
 		/*

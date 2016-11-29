@@ -27,56 +27,6 @@ class ManagerController extends Controller
         $this->redirect('./index.php?r=houtai/manager/login');
     }
 
-    //设置session
-    //通过session组件来设置
-    public function actionSetSession()
-    {
-        Yii::app()->session['username'] = 'zhangsan';
-        Yii::app()->session['useraddr'] = 'shanghai';
 
-        echo 'set Session success';
-    }
-
-    //获取session
-    public function actionGetSession()
-    {
-        echo Yii::app()->session['username'] . '<br />';
-        echo Yii::app()->session['useraddr'];
-    }
-
-    //删除session
-    public function actionDelSession()
-    {
-        //删除一个session
-        //unset(Yii::app()->session['useraddr']);
-
-        //删除全部
-        Yii::app()->session->clear();
-        Yii::app()->session->destroy();
-
-    }
-
-    //设置cookie
-    public function actionSetCookie()
-    {
-        $ck = new CHttpCookie('hobby', '篮球，足球');
-        $ck->expire = time() + 3600;    //过期时间
-        //把$ck对象放入cookie组件里
-        Yii::app()->request->cookies['hobby'] = $ck;
-
-        echo 'set Cookie success';
-    }
-
-    //获取cookie
-    public function actionGetCookie()
-    {
-        echo Yii::app()->request->cookies['hobby'];
-    }
-
-    //删除cookie
-    public function actionDelCookie()
-    {
-        unset(Yii::app()->request->cookies['hobby']);
-    }
 
 }
