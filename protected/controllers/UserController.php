@@ -19,6 +19,7 @@ class UserController extends Controller
               ),
               'myclass' => array(
                   'class' => 'application.controllers.MyClass',
+                  'sex'=>'my parm111',
               ),
 
         );

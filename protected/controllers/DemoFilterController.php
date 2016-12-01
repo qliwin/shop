@@ -23,7 +23,7 @@ class DemoFilterController extends Controller
 
     // 2. 设置访问条件 accessRules
     // allow:允许 ，deny:不允许，两个必须成对出现。没有deny收口的话上面的规则将失效.allow的数组必须出现在deny前面
-    // actions：表示对那些方法使用过滤
+    // actions：表示对那些方法使用过滤。根据数组顺序，越前面越优先
     // 1）@：表示登录的用户 2）*：表示所有用户（不论登录与否） 3）?：表示匿名用户 4）用户名：表示具体用户
     public function accessRules()
     {
@@ -33,11 +33,12 @@ class DemoFilterController extends Controller
             array(
                 'allow',
                 'actions' => array('fun1'),
-                'users' => array('@'),
+                'users'   => array('@'),
             ),
             //所有用户。所有用户都能访问fun2
             array(
                 'allow',
+                //'actions' => array('fun2','fun3'),  //  fun3将会所有用户都可以访问，后面制定的rules将失效
                 'actions' => array('fun2'),
                 'users' => array('*'),
             ),

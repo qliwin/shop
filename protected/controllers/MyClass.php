@@ -8,8 +8,16 @@
  */
 class MyClass extends CAction
 {
-    public function run()
+    public $sex;
+
+    public function __construct($sex1)
     {
-        echo '哈哈哈，我是MyClass类，请记住我！';
+        echo '#####';
+        $this->sex = $sex1;
+    }
+
+    public function run($name = '')
+    {
+        echo '哈哈哈，我是MyClass类，请记住我！' . $name . $this->sex;
     }
 }
