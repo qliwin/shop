@@ -71,6 +71,7 @@ return array(
 			'charset' => 'utf8',
             'tablePrefix' => 'sw_', //表前缀
             'enableParamLogging' => true, //显示sql语句中绑定的参数信息
+            'enableProfiling' => true,//显示每个sql运行的时间
 
 		),
 

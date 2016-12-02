@@ -3,7 +3,7 @@
 class DemoCommonController extends Controller
 {
     //
-    public function actionT1()
+    public function actionAll()
     {
         echo Yii::app()->getVersion();
         //查询是哪个类的实例，CWebApplication
@@ -19,5 +19,16 @@ class DemoCommonController extends Controller
         //当前控制器名称和方法名称
         echo $this->id . '<br />';
         echo $this->action->id . '<br />';
+    }
+
+    //计算脚本运行时间
+    public function actionTime()
+    {
+        Yii::beginProfile('myTime');
+        for ($i=0; $i < 1000; $i++) {
+            echo $i;
+        }
+        Yii::endProfile('myTime');
+
     }
 }

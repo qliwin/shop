@@ -6,6 +6,32 @@
 
 class GoodsController extends Controller
 {
+    //定义过滤器与动作的关系
+    public function filters()
+    {
+        return array(
+            'accessControl',
+        );
+    }
+
+    public function accessRules()
+    {
+        return array(
+            //所有人都可以访问show动作
+            array(
+                'allow',
+                'actions'=>array('show'),
+                'users'=>array('*')
+            ),
+            //匿名用户不得访问以上没有设置过的动作
+            array(
+                'deny',
+                'users'=>array('?')
+            ),
+
+        );
+    }
+
     //商品展示
     public function actionShow()
     {
@@ -62,6 +88,9 @@ class GoodsController extends Controller
 
         // 4. 调用save 添加
             if ($goods_model->save()) {
+                //设置成功信息
+                Yii::app()->user->setFlash('saveStatus','添加成功');
+
                 //重定向
                 $this->redirect('./index.php?r=houtai/goods/show');
             } else {

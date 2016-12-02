@@ -19,7 +19,8 @@
                 </span>
             </span>
         </div>
-        <div></div>
+        <!--判断有saveStatus提示信息，有就显示-->
+        <div><?php echo Yii::app()->user->hasFlash('saveStatus') ? Yii::app()->user->getFlash('saveStatus') : ''; ?></div>
         <div class="div_search">
             <span>
                 <form action="#" method="get">

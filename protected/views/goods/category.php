@@ -129,46 +129,8 @@
                 <div class="blank"></div>
 
 
-                <div class="itemTit" id="itemBest">
-
-                    <div class="tit">精品推荐</div>
-                </div>
-                <div id="show_best_area" class="clearfix">
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo IMG_URL; ?>9_thumb_G_1241511871555.jpg" alt="诺基亚E66" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="诺基亚E66">诺基亚E66</a></p>
 
 
-                        <font class="market">￥2758元</font><br />
-
-                        <font class="f1">
-                            ￥2298元                     </font>
-                    </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo IMG_URL; ?>8_thumb_G_1241425513488.jpg" alt="飞利浦9@9v" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="飞利浦9@9v">飞利浦9@9v</a></p>
-
-
-                        <font class="market">￥479元</font><br />
-
-                        <font class="f1">
-                            ￥399元                     </font>
-                    </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo IMG_URL; ?>17_thumb_G_1241969394587.jpg" alt="夏新N7" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="夏新N7">夏新N7</a></p>
-
-
-                        <font class="market">￥2760元</font><br />
-
-                        <font class="f1">
-                            ￥2300元                     </font>
-                    </div>
-
-                </div>
                 <div class="blank"></div>
                 <div class="box">
                     <div class="box_1">
@@ -196,86 +158,17 @@
                         </h3>
                         <form name="compareForm" action="compare.php" method="post" onsubmit="return compareGoods(this);">
                             <div class="clearfix goodsBox" style="border: medium none; padding: 11px 0pt 10px 5px;">
+
+                                <?php foreach ($goods_list as $goods):; ?>
                                 <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>32_thumb_G_1242110760196.jpg" alt="诺基亚N85" class="goodsimg"></a><br />
-                                    <p><a href="#" title="诺基亚N85">诺基亚N85</a></p>
-                                    <font class="market_s">￥3612元</font><br />
-                                    <font class="shop_s">￥3010元</font><br />
+                                    <a href="#"><img src="<?php echo IMG_URL . $goods->goods_small_img; ?>" alt="<?php echo $goods->goods_name; ?>" class="goodsimg"></a><br />
+                                    <p><a href="#" title="<?php echo $goods->goods_name; ?>"><?php echo $goods->goods_name; ?></a></p>
+                                    <font class="market_s">￥<?php echo $goods->goods_price;; ?>元</font><br />
+                                    <font class="shop_s">￥<?php echo $goods->goods_price;; ?>元</font><br />
                                     <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
                                     <a href="#"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
                                 </div>
-                                <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>24_thumb_G_1241971981429.jpg" alt="P806" class="goodsimg"></a><br />
-                                    <p><a href="#" title="P806">P806</a></p>
-                                    <font class="market_s">￥2400元</font><br />
-                                    <font class="shop_s">￥2000元</font><br />
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
-                                </div>
-                                <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>22_thumb_G_1241971076803.jpg" alt="多普达Touc..." class="goodsimg"></a><br />
-                                    <p><a href="#" title="多普达Touch HD">多普达Touc...</a></p>
-                                    <font class="market_s">￥7199元</font><br />
-                                    <font class="shop_s">￥5999元</font><br />
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#;"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
-                                </div>
-                                <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>21_thumb_G_1242109298150.jpg" alt="金立 A30" class="goodsimg"></a><br />
-                                    <p><a href="#" title="金立 A30">金立 A30</a></p>
-                                    <font class="market_s">￥2400元</font><br />
-                                    <font class="shop_s">￥2000元</font><br />
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#;"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
-                                </div>
-                                <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>20_thumb_G_1242106490058.jpg" alt="三星BC01" class="goodsimg"></a><br />
-                                    <p><a href="#" title="三星BC01">三星BC01</a></p>
-                                    <font class="market_s">￥336元</font><br />
-                                    <font class="shop_s">￥280元</font><br />
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#;"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
-                                </div>
-                                <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>19_thumb_G_1241970175208.jpg" alt="三星SGH-F..." class="goodsimg"></a><br />
-                                    <p><a href="#" title="三星SGH-F258">三星SGH-F...</a></p>
-                                    <font class="market_s">￥1030元</font><br />
-                                    <font class="shop_s">￥858元</font><br />
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#;"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
-                                </div>
-                                <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>17_thumb_G_1241969394587.jpg" alt="夏新N7" class="goodsimg"></a><br />
-                                    <p><a href="#" title="夏新N7">夏新N7</a></p>
-                                    <font class="market_s">￥2760元</font><br />
-                                    <font class="shop_s">￥2300元</font><br />
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#;"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
-                                </div>
-                                <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>13_thumb_G_1241968002527.jpg" alt="诺基亚5320..." class="goodsimg"></a><br />
-                                    <p><a href="#" title="诺基亚5320 XpressMusic">诺基亚5320...</a></p>
-                                    <font class="market_s">￥1573元</font><br />
-                                    <font class="shop_s">￥1311元</font><br />
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#;"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
-                                </div>
-                                <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>12_thumb_G_1241965978410.jpg" alt="摩托罗拉A81..." class="goodsimg"></a><br />
-                                    <p><a href="#" title="摩托罗拉A810">摩托罗拉A81...</a></p>
-                                    <font class="market_s">￥1180元</font><br />
-                                    <font class="shop_s">￥983元</font><br />
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#;"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
-                                </div>
-                                <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>10_thumb_G_1242973436403.jpg" alt="索爱C702c" class="goodsimg"></a><br />
-                                    <p><a href="#" title="索爱C702c">索爱C702c</a></p>
-                                    <font class="market_s">￥1594元</font><br />
-                                    <font class="shop_s">￥1328元</font><br />
-                                    <a href="#"><img src="<?php echo IMG_URL; ?>goumai.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#;"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </form>
 

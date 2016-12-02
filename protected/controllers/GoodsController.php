@@ -8,7 +8,12 @@ class GoodsController extends Controller
     //商品list
     public function actionCategory()
     {
-        $this->render('category');
+        $goods_model = Goods::model();
+
+        $goods_list = $goods_model->findAll();
+
+
+        //$this->render('category', array('goods_list'=>$goods_list));
     }
 
     //商品详情

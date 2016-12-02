@@ -22,6 +22,9 @@ class HoutaiModule extends CWebModule
         Yii::app()->setComponents(array(
             'user' => array(
                 'stateKeyPrefix' => 'houtai',
+                //在使用filter过滤时，未登录的用户会自动跳转到自定义的登录页面
+                //属性在 framework/web/auth/CWebUser
+                'loginUrl' => './index.php?r=houtai/manager/login',
             )
         ));
 	}
