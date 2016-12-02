@@ -24,6 +24,7 @@ class DemoCommonController extends Controller
     //计算脚本运行时间
     public function actionTime()
     {
+        //myTime只是标识，可以随便写，但必须要配对
         Yii::beginProfile('myTime');
         for ($i=0; $i < 1000; $i++) {
             echo $i;

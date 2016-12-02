@@ -158,10 +158,11 @@
                         </h3>
                         <form name="compareForm" action="compare.php" method="post" onsubmit="return compareGoods(this);">
                             <div class="clearfix goodsBox" style="border: medium none; padding: 11px 0pt 10px 5px;">
-
-                                <?php foreach ($goods_list as $goods):; ?>
+                                <!--片段缓存-->
+                                <?php if ($this->beginCache('goods')): ?>
+                                <?php foreach ($goods_list as $goods): ?>
                                 <div class="goodsItem">
-                                    <a href="#"><img src="<?php echo IMG_URL . $goods->goods_small_img; ?>" alt="<?php echo $goods->goods_name; ?>" class="goodsimg"></a><br />
+                                    <a href="<?php echo "./index.php?r=goods/detail&goods_id={$goods->goods_id}"; ?>"><img src="<?php echo IMG_URL . $goods->goods_small_img; ?>" alt="<?php echo $goods->goods_name; ?>" class="goodsimg"></a><br />
                                     <p><a href="#" title="<?php echo $goods->goods_name; ?>"><?php echo $goods->goods_name; ?></a></p>
                                     <font class="market_s">￥<?php echo $goods->goods_price;; ?>元</font><br />
                                     <font class="shop_s">￥<?php echo $goods->goods_price;; ?>元</font><br />
@@ -169,6 +170,8 @@
                                     <a href="#"><img src="<?php echo IMG_URL; ?>shoucang.gif"></a>
                                 </div>
                                 <?php endforeach; ?>
+                                <?php $this->endCache(); ?>
+                                <?php endif; ?>
                             </div>
                         </form>
 
