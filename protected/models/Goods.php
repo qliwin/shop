@@ -30,4 +30,25 @@ class Goods extends CActiveRecord
             'goods_introduce'=>'简介',
         );
     }
+
+    /**
+     * @param $goods_id
+     * @return array|mixed|null
+     * 将商品信息存入缓存，下次再来获得信息就去缓存中查找
+     */
+    public function getGoodsInfoByPk($goods_id)
+    {
+        //获取goods_info,没有返回false
+        $goods_info = Yii::app()->cache->get("goods_info . {$goods_id}");
+
+        //判断缓存信息,没有则设置缓存
+        if (! $goods_info) {
+            $goods_info = $this->findByPk($goods_id);
+            //设置不同的缓存变量名
+            Yii::app()->cache->set("goods_info . {$goods_id}", $goods_info, 3600);
+        }
+        return $goods_info;
+    }
+
+
 }

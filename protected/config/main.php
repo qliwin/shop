@@ -96,7 +96,7 @@ return array(
 		),
 
         'cache'=>array(
-            'class'=>'system.caching.CFileCache',
+            'class'=>'system.caching.CFileCache',//文件缓存
         ),
 	),
 

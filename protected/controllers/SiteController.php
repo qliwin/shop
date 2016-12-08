@@ -39,9 +39,11 @@ class SiteController extends Controller
 	{
 		if($error=Yii::app()->errorHandler->error)
 		{
+            //p($error);
 			if(Yii::app()->request->isAjaxRequest)
 				echo $error['message'];
 			else
+			    die('你访问的页面发生错误！');
 				$this->render('error', $error);
 		}
 	}

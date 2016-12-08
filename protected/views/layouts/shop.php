@@ -28,11 +28,18 @@
                         欢迎光临本店&nbsp;
                         <a href="./index.php?r=user/login"> 登录</a>
                         <a href="./index.php?r=user/register">注册</a>
+                        <?php //echo microtime(); ?>
                     </font>
                     <?php else: ?>
                     <font id="ECS_MEMBERZONE">
                         <div id="append_parent"></div>
-                        <font class="f4_b"><?php echo Yii::app()->user->name; ?></font>, 欢迎您回来！<?php echo Yii::app()->session['var']; ?>
+                        <font class="f4_b">
+                            <?php //echo Yii::app()->user->name; ?>
+
+                            <!--局部动态缓存-->
+                            <?php echo $this->renderDynamic('my_show_name'); ?>
+                        </font>
+                        , 欢迎您回来！<?php echo Yii::app()->session['var']; ?>
                         <a href="#">用户中心</a>
                         <a href="./index.php?r=user/logout">退出</a>
                     </font>

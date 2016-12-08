@@ -3,6 +3,7 @@
             <div class="blank"></div>
             <div id="ur_here">
                 当前位置: <a href="#">首页</a> <code>&gt;</code> <a href="#">手机类型</a> <code>&gt;</code> <a href="#">GSM手机</a> 
+                <?php //echo microtime(); ?>
             </div>
         </div>
         <div class="blank"></div>
@@ -159,7 +160,16 @@
                         <form name="compareForm" action="compare.php" method="post" onsubmit="return compareGoods(this);">
                             <div class="clearfix goodsBox" style="border: medium none; padding: 11px 0pt 10px 5px;">
                                 <!--片段缓存-->
-                                <?php if ($this->beginCache('goods')): ?>
+                                <!--缓存时间duration-->
+                                <?php if ($this->beginCache('goods',array(
+                                    'duration'=>3600,  //缓存有效期
+                                    'varyByParam'=>array('page'),//缓存变化，根据不同的page参数生成不同的缓存页面
+                                    'dependency'=>array(
+                                        //依赖缓存
+                                        'class'=>'system.caching.dependencies.CDbCacheDependency',
+                                        'sql'=>'select sum(goods_price) from {{goods}}',
+                                    ),
+                                ))): ?>
                                 <?php foreach ($goods_list as $goods): ?>
                                 <div class="goodsItem">
                                     <a href="<?php echo "./index.php?r=goods/detail&goods_id={$goods->goods_id}"; ?>"><img src="<?php echo IMG_URL . $goods->goods_small_img; ?>" alt="<?php echo $goods->goods_name; ?>" class="goodsimg"></a><br />
@@ -178,14 +188,11 @@
                     </div>
                 </div>
                 <div class="blank5"></div>
-                <form name="selectPageForm" action="/category.php" method="get">
-                    <div id="pager" class="pagebar">
-                        <span class="f_l " style="margin-right: 10px;">总计 <b>12</b>  个记录</span>
-                        <span class="page_now">1</span>
-                        <a href="#">[2]</a>
+                <div>
 
-                        <a class="next" href="#">下一页</a>    </div>
-                </form>
+                    <?php echo $fpage; ?>
+                </div>
+
             </div>  
 
         </div>
